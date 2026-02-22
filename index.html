@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Catur Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chess"></i> Game Catur Online</h1>
+            <p class="subtitle">Mainkan catur dengan teman di browser yang sama</p>
+        </header>
+
+        <div class="game-container">
+            <!-- Panel Kontrol -->
+            <div class="control-panel">
+                <div class="player-info">
+                    <div class="player white-player active">
+                        <div class="player-color white"></div>
+                        <h3>Pemain Putih</h3>
+                        <p class="player-turn">Giliran Anda</p>
+                    </div>
+                    
+                    <div class="vs">VS</div>
+                    
+                    <div class="player black-player">
+                        <div class="player-color black"></div>
+                        <h3>Pemain Hitam</h3>
+                        <p class="player-turn">Menunggu</p>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <div class="status">
+                        <h3>Status Game</h3>
+                        <p id="game-status">Putih memulai permainan</p>
+                    </div>
+                    
+                    <div class="captured-pieces">
+                        <h3>Bidak yang Ditangkap</h3>
+                        <div class="captured-container">
+                            <div class="captured-white">
+                                <h4>Putih</h4>
+                                <div id="captured-white"></div>
+                            </div>
+                            <div class="captured-black">
+                                <h4>Hitam</h4>
+                                <div id="captured-black"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="new-game" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Game Baru
+                    </button>
+                    <button id="undo-move" class="btn btn-secondary">
+                        <i class="fas fa-undo"></i> Undo
+                    </button>
+                    <button id="flip-board" class="btn btn-secondary">
+                        <i class="fas fa-sync-alt"></i> Putar Papan
+                    </button>
+                    <button id="hint-toggle" class="btn btn-secondary">
+                        <i class="fas fa-lightbulb"></i> Petunjuk: <span id="hint-status">ON</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Papan Catur -->
+            <div class="chess-board-container">
+                <div class="board-header">
+                    <h2>Papan Catur</h2>
+                    <div class="move-counter">
+                        <span>Langkah: <span id="move-count">0</span></span>
+                    </div>
+                </div>
+                
+                <div class="chess-board" id="chess-board">
+                    <!-- Papan akan di-generate oleh JavaScript -->
+                </div>
+                
+                <div class="coordinates">
+                    <div class="files">
+                        <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+                    </div>
+                    <div class="ranks">
+                        <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+                    </div>
+                </div>
+            </div>
+<script src="script.js"></script>
+        </body>
+        </html>
